@@ -7,7 +7,7 @@ const cors = require('cors')
 const usersRouter = require('./users/users-router')
 // const tech_itemsRouter = require('./tech_items/tech_items-router')
 const authRouter = require('./auth/auth-router')
-// const rentalsRouter = require('./rentals/rentals-router')
+const rentalRouter = require('./rental/rental-router')
 
 const server = express()
 server.use(express.json())
@@ -16,7 +16,7 @@ server.use(cors())
 
 server.use('/api/users', usersRouter);
 // server.use('/api/techitems', tech_itemsRouter)
-// server.use('/api/rentals', rentalsRouter)
+server.use('/api/rental', rentalRouter)
 server.use('/auth', authRouter)
 
 
