@@ -7,7 +7,7 @@ router.get('/', (req,res)=>{
       res.status(200).json(item)
     })
     .catch(() =>{
-      res.status(404).json({message: "Could not find rentals."})
+      res.status(404).json({ message: "could not find rentals" })
     })
 })
 
@@ -22,7 +22,7 @@ router.post('/', (req,res)=>{
       res.status(201).json(techItem);
     })
     .catch(err =>{
-      res.status(401).json({message:"could not add rental", err: err.message })
+      res.status(401).json({ message:"could not add rental", err: err.message })
     })
   }
 })
@@ -34,7 +34,7 @@ router.put('/:id', (req,res)=>{
     res.status(201).json(newRental)
   })
   .catch(err =>{
-    res.status(401).json({message: "could not update rental", err: err.message })
+    res.status(401).json({ message: "could not update rental", err: err.message })
   })
 })
 
@@ -44,7 +44,7 @@ router.delete('/:id', (req,res)=>{
     res.status(201).json(deleted)
   })
   .catch(err =>{
-    res.status(401).json({message:"could not delete rental", err: err.message })
+    res.status(401).json({ message:"could not delete rental", err: err.message })
   })
 })
 
